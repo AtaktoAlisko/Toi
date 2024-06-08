@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Great+Vibes&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@font-face {
+  font-family: "srift";
+  src: url("../assets/srift.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "kkk";
+  src: url("../assets/kkk.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: "kkk", sans-serif;
+  background: linear-gradient(to bottom right, #E0E0E0, #B0B0B0, #707070);
+  color: #2C3E50;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.font {
+  font-family: "srift", serif;
+}
+
+.color {
+  color: #7b5520;
+}
+
+.gis {
+  border-radius: 10px;
+}
+
+/* Анимация сердечка */
+@keyframes heartAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.heart {
+  position: absolute;
+  margin-top: 1900px;
+  margin-left: 62px;
+  animation: heartAnimation 2s ease-in-out infinite;
+}
+
+/* Медиа-запросы для плавной адаптации */
+@media screen and (min-width: 300px) {
+  .heart {
+    margin-left: calc(60px + ((1vw - 3px) * 0.5));
+  }
+}
+
+/* Добавляем стили для элементов текста */
+.text-title {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.5rem;
+  color: #7b5520;
+}
+
+.text-heading {
+  font-family: "srift", serif;
+  font-size: 2rem;
+  color: #2C3E50;
+}
+
+.text-body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.25rem;
+  color: #2C3E50;
+}
+
+.text-highlight {
+  font-family: "srift", serif;
+  font-size: 2.5rem;
+  color: #7b5520;
+}
